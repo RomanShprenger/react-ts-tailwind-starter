@@ -1,0 +1,26 @@
+# builds/dists
+.next
+
+# logs
+logs
+*.log
+
+# dependencies
+node_modules
+
+# ide
+.vscode
+.idea
+
+# dotenv environment variables file
+packages/web/.env
+.env.test
+.env.dev
+.env.staging
+
+.DS_Store
+
+dist
+build
+
+build-storybook/

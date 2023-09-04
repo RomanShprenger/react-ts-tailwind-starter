@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    @apply text-gray-500 font-manrope;
+  }
+
+  ::-moz-selection {
+    @apply bg-purple-200;
+  }
+  
+  ::selection {
+    @apply bg-purple-200;
+  }
+}
+
+@layer components {
+  /* Text colors */
+  .theme-text-default {
+    @apply text-gray-500;
+  }
+  .theme-text-secondary {
+    @apply text-gray-300;
+  }
+  .theme-text-error {
+    @apply text-orange-600;
+  }
+  .theme-text-success {
+    @apply text-green-600;
+  }
+  .theme-link {
+    @apply text-blue-500;
+  }
+  /* Border colors */
+  .theme-border {
+    @apply border-gray-100;
+  }
+  .theme-placeholder-color {
+    @apply placeholder:text-gray-200;
+  }
+  /* UI component base styles */
+  .theme-heading {
+    @apply font-poppins text-5xl theme-text-default font-bold m-0 capitalize;
+  }
+  .theme-subheading {
+    @apply font-manrope font-semibold text-base theme-text-secondary;
+  }
+  .theme-text {
+    @apply font-manrope font-semibold text-base theme-text-default;
+  }
+  .theme-special-text {
+    @apply font-source-serif theme-text-default;
+  }
+  .theme-caption {
+    @apply font-manrope font-semibold text-sm theme-text-secondary tracking-[1px];
+  }
+  .select-base {
+    @apply w-full inline-flex border-solid border theme-placeholder-color theme-text-default px-6 py-4 rounded-lg appearance-none leading-none h-14 focus-visible:outline-none pr-10;
+  }
+  .select-chevron {
+    @apply absolute right-0 top-1/2 -translate-y-1/2 pl-1 w-10 flex items-center pointer-events-none;
+  }
+  .avatar-base {
+    @apply border-solid border rounded-full flex flex-row items-center justify-center h-14 w-14 text-[32px] leading-10 font-source-serif;
+  }
+  .dropdown-menu {
+    @apply flex flex-col p-1 gap-y-1 bg-white border border-gray-50 shadow-lg rounded-lg;
+  }
+  .dropdown-menu-item {
+    @apply flex flex-row items-center justify-between border-none p-4 w-full;
+  }
+  .datepicker {
+    @apply theme-text;
+  }
+  .datepicker::-webkit-calendar-picker-indicator {
+    @apply opacity-0 absolute left-0 top-0 w-full h-full cursor-pointer;
+  }
+}
+
+/* CUSTOM STYLES FOR TOAST */
+.toast button {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast .Toastify__toast-icon {
+  margin-right: 24px;
+  width: auto;
+}
